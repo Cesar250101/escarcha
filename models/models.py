@@ -12,7 +12,7 @@ class ModuleName(models.Model):
 class ModuleName(models.Model):
     _inherit = 'account.invoice.line'
 
-    precio_sin_impto = fields.Char(compute='_compute_precio_sin_impto', string='Precio S/Impto')
+    precio_sin_impto = fields.Float(compute='_compute_precio_sin_impto', string='Precio S/Impto')
     
     @api.depends('quantity','price_unit')
     @api.one
